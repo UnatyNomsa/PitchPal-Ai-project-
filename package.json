@@ -13,7 +13,8 @@
     "build:server": "esbuild server/index.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/server.js --external:@neondatabase/serverless",
     "start": "node dist/server.js",
     "db:push": "drizzle-kit push:pg",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "test:setup": "node test-setup.js"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.0",
@@ -24,6 +25,7 @@
     "@tanstack/react-query": "^5.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "dotenv": "^17.0.1",
     "drizzle-orm": "^0.29.0",
     "express": "^4.18.2",
     "lucide-react": "^0.400.0",
